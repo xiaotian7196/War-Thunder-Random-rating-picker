@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>战雷随机分房生成器</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="tabs-container">
+    <div class="tabs">
+      <div class="tab active">正常生成</div>
+      <div class="tab">不正常生成</div>
+    </div>
+    <div class="content-container">
+      <div class="content active">
+        <h2>正常随机分房生成器（1.0-13.0）</h2>
+        <button onclick="generateRandomNumberNormal()">生成</button>
+        <p id="randomNumberNormal">BVVD飞马</p>
+        <img src="img/new.gif" />
+      </div>
+      <div class="content">
+        <h2>不正常随机分房生成器（1.0-13.0，但7.0以上的几率更大）</h2>
+        <button onclick="generateRandomNumberPlus()">生成</button>
+        <p id="randomNumberplus">BVVD飞马</p>
+        <img src="img/new.gif" />
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/random.js"></script>
+</body>
+
+</html>
