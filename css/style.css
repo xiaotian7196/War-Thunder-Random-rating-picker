@@ -1,4 +1,5 @@
 .tabs-container {
+  border-radius: 30px;
   font-family: "Roboto", sans-serif;
   max-width: 1000px;
   min-height: 400px;
@@ -8,7 +9,8 @@
 }
 
 .tabs-container .tabs {
-  width: 300px;
+  border-radius: 30px;
+  width: 200px;
   background: #66CCFF;
   color: #fff;
   text-transform: uppercase;
@@ -16,8 +18,12 @@
 }
 
 .tabs-container .tabs .tab {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 30px;
   padding: 24px 32px;
-  background: #222;
+  background: #66CCFF;
   cursor: pointer;
   font-weight: bold;
 }
@@ -47,4 +53,9 @@
 
 .tabs-container .content-container p {
   line-height: 2;
+}
+
+.qwq {
+  color: grey;
+  text-align: center;
 }
