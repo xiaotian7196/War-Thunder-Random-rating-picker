@@ -1,9 +1,29 @@
+/* 通用样式 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 使用 min-height 确保足够的高度 */
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* 纵向排列 */
+  width: 90%; /* 响应式宽度 */
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px; /* 内边距 */
+  margin: auto; /* 自动水平外边距 */
+}
+
+/* 标签部分样式 */
 .tabs-container {
   border-radius: 30px;
-  font-family: "Roboto", sans-serif;
-  max-width: 1000px;
-  min-height: 400px;
-  margin: 30px auto;
   display: flex;
   box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
 }
@@ -18,14 +38,17 @@
 }
 
 .tabs-container .tabs .tab {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  text-align: center;
+  margin: 5px 0;
   border-radius: 30px;
-  padding: 24px 32px;
+  padding: 16px 8px;
   background: #66CCFF;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s;
+}
+
+.tabs-container .tabs .tab:hover {
+  background: #55aacc; /* 悬停效果 */
 }
 
 .tabs-container .tabs .tab.active {
@@ -35,27 +58,91 @@
 
 .tabs-container .content-container {
   background: #f6fdff;
+  flex-grow: 1; /* 使内容区域填满剩余空间 */
+  border-radius: 0 30px 30px 0;
+  padding: 20px; /* 添加内边距 */
 }
 
 .tabs-container .content-container .content {
   display: none;
-  padding: 32px;
 }
 
 .tabs-container .content-container .content.active {
   display: block;
 }
 
-.tabs-container .content-container h3 {
-  margin: 0;
-  font-size: 30px;
+.tabs-container .content-container h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
 }
 
 .tabs-container .content-container p {
-  line-height: 2;
+  line-height: 1.5;
+}
+
+/* 黄历部分样式 */
+.date {
+  padding-top: 10px;
+  font-size: 17pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+.good,
+.bad {
+  margin: 15px 0; /* 适当的间距 */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.good {
+  background-color: #ffee44;
+}
+
+.bad {
+  background-color: #ff4444;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center; /* 标题居中 */
+}
+
+.awa1, .awa2 {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0; /* 顶部边距 */
+}
+
+.awa1 li, .awa2 li {
+  list-style: none;
+  padding: 5px 0; /* 列表项上下间距 */
+}
+
+/* 额外样式 */
+.line-tip {
+  padding-bottom: 10px;
+  text-align: center; /* 文本居中 */
+}
+
+/* 按钮样式 */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3; /* 悬停效果 */
 }
 
 .qwq {
   color: grey;
   text-align: center;
+  margin-top: 20px;
 }

@@ -6,6 +6,9 @@ function generateRandomNumberAirCombat() {
         decimal = validDecimals[Math.floor(Math.random() * validDecimals.length)];
     }
     document.getElementById("randomNumberAirCombat").innerText = number + '.' + decimal;
+    var img = document.getElementById('image1');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
 }
 function generateRandomNumberPlus() {
     var number;
@@ -20,6 +23,9 @@ function generateRandomNumberPlus() {
         decimal = validDecimals[Math.floor(Math.random() * validDecimals.length)];
     }
     document.getElementById("randomNumberplus").innerText = number + '.' + decimal;
+    var img = document.getElementById('image3');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
 }
 function generateRandomNumberGround() {
     var number = Math.floor(Math.random() * 12) + 1;
@@ -33,6 +39,9 @@ function generateRandomNumberGround() {
         randomNumber = 12.3;
     }
     document.getElementById("randomNumberGround").innerText = randomNumber;
+    var img = document.getElementById('image');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
 }
 function generateRandomNumberSeaBattle() {
     var number = Math.floor(Math.random() * 7) + 1;
@@ -42,4 +51,34 @@ function generateRandomNumberSeaBattle() {
         decimal = validDecimals[Math.floor(Math.random() * validDecimals.length)];
     }
     document.getElementById("randomNumberSeaBattle").innerText = number + '.' + decimal;
+    var img = document.getElementById('image2');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
 }
+var images = [
+    'img/image1.png',
+    'img/image2.png',
+    'img/image3.png',
+    'img/image4.png',
+    'img/image5.png',
+    'img/image6.png',
+    'img/image7.png',
+    'img/image8.png',
+    'img/image9.png',
+    'img/image10.png'
+];
+function displayRandomImage() {
+    var img = document.getElementById('image');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
+    var img = document.getElementById('image1');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
+    var img = document.getElementById('image2');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
+    var img = document.getElementById('image3');
+    var randomIndex = Math.floor(Math.random() * images.length);
+    img.src = images[randomIndex];
+}
+
