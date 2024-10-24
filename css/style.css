@@ -1,4 +1,4 @@
-/* 通用样式 */
+/* ---通用样式--- */
 body {
   display: flex;
   justify-content: center;
@@ -7,6 +7,8 @@ body {
   margin: 0;
   background-color: #f0f0f0;
   font-family: "Roboto", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .container {
@@ -26,6 +28,7 @@ body {
   border-radius: 30px;
   display: flex;
   box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
+
 }
 
 .tabs-container .tabs {
@@ -80,9 +83,12 @@ body {
   line-height: 1.5;
 }
 
-/* 黄历部分样式 */
+
+
+/* ---黄历样式--- */
 .date {
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 8px;
   font-size: 17pt;
   font-weight: bold;
   text-align: center;
@@ -120,7 +126,7 @@ body {
   padding: 5px 0; /* 列表项上下间距 */
 }
 
-/* 额外样式 */
+/* ---额外样式--- */
 .line-tip {
   padding-bottom: 10px;
   text-align: center; /* 文本居中 */

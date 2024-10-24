@@ -16,37 +16,33 @@ var today = new Date();
 var iday = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
 
 var weeks = ["日", "一", "二", "三", "四", "五", "六"];
-var directions = ["北方", "东北方", "东方", "东南方", "南方", "西南方", "西方", "西北方"];
+var directions = ["North", "Northeast", "East", "Southeast", "South", "Southwest", "West", "Northwest"];
 var activities = [
-	{ name: "玩苏系", good: "", bad: "", weekend: true },
-	{ name: "玩冲系", good: "", bad: "", weekend: true },
-	{ name: "玩美系", good: "", bad: "", weekend: true },
-	{ name: "玩德系", good: "", bad: "", weekend: true },
-	{ name: "玩英系", good: "", bad: "", weekend: true },
-	{ name: "玩法系", good: "", bad: "", weekend: true },
-	{ name: "玩意系", good: "", bad: "", weekend: true },
-	{ name: "玩日系", good: "", bad: "", weekend: true },
-	{ name: "玩瑞系", good: "", bad: "", weekend: true },
-	{ name: "炸战区", good: "", bad: "", weekend: true },
-	{ name: "当空中小人", good: "", bad: "", weekend: true },
-	{ name: "玩海战", good: "", bad: "", weekend: true },
-	{ name: "压家", good: "", bad: "", weekend: true },
-	{ name: "攻击机制空", good: "", bad: "", weekend: true },
-	{ name: "制空机舔地", good: "", bad: "", weekend: true },
-	{ name: "当地雷", good: "", bad: "", weekend: true },
-	{ name: "玩陆战", good: "", bad: "", weekend: true },
-	{ name: "玩空战", good: "", bad: "", weekend: true },
-	{ name: "提交issue", good: "", bad: "", weekend: true },
-	{ name: "给bvvd交钱", good: "", bad: "", weekend: true },
-	{ name: "买金车", good: "", bad: "", weekend: true },
-	{ name: "买高涨", good: "", bad: "", weekend: true },
-	{ name: "晚上上线", good: "", bad: "", weekend: true },
-	{ name: "早上上线", good: "", bad: "", weekend: true },
-	{ name: "找代肝", good: "", bad: "", weekend: true },
-	{ name: "问候bvvd的麻麻", good: "", bad: "", weekend: true },
-	{ name: "冷战房", good: "", bad: "", weekend: true },
-	{ name: "顶级房", good: "", bad: "", weekend: true },
-	{ name: "二战房", good: "", bad: "", weekend: true }
+	{ name: "Play Soviet", good: "", bad: "", weekend: true },
+	{ name: "Play British", good: "", bad: "", weekend: true },
+	{ name: "Play American", good: "", bad: "", weekend: true },
+	{ name: "Play German", good: "", bad: "", weekend: true },
+	{ name: "Play Japanese", good: "", bad: "", weekend: true },
+	{ name: "Play Italian", good: "", bad: "", weekend: true },
+	{ name: "Play French", good: "", bad: "", weekend: true },
+	{ name: "Play Swedish", good: "", bad: "", weekend: true },
+	{ name: "Play Puma", good: "", bad: "", weekend: true },
+	{ name: "play free abrams", good: "", bad: "", weekend: true },
+	{ name: "land battle", good: "", bad: "", weekend: true },
+	{ name: "dogfight", good: "", bad: "", weekend: true },
+	{ name: "naval battle", good: "", bad: "", weekend: true },
+	{ name: "1 tap", good: "", bad: "", weekend: true },
+	{ name: "submit issue", good: "", bad: "", weekend: true },
+	{ name: "buy Golden Eagle", good: "", bad: "", weekend: true },
+	{ name: "buy Advanced Vehicles", good: "", bad: "", weekend: true },
+	{ name: "buy Premium Account", good: "", bad: "", weekend: true },
+	{ name: "Online in the night", good: "", bad: "", weekend: true },
+	{ name: "Online in the morning", good: "", bad: "", weekend: true },
+	{ name: "sign in", good: "", bad: "", weekend: true },
+	{ name: "initial match", good: "", bad: "", weekend: true },
+	{ name: "Cold war match", good: "", bad: "", weekend: true },
+	{ name: "Top match", good: "", bad: "", weekend: true },
+	{ name: "World War II match", good: "", bad: "", weekend: true }
 ];
 
 var specials = [
@@ -57,14 +53,14 @@ var tools = ["Eclipse写程序", "MSOffice写文档", "记事本写程序", "Win
 
 var varNames = ["jieguo", "huodong", "pay", "expire", "zhangdan", "every", "free", "i1", "a", "virtual", "ad", "spider", "mima", "pass", "ui"];
 
-var drinks = ["水", "茶", "红茶", "绿茶", "荞麦轻茶", "咖啡", "奶茶", "可乐", "鲜百香胶原摇摇冻", "陨石拿铁", "莓莓果茶", "草莓奶露", "布雷奶芙瑞纳冰", "冰激凌红茶"];
+var drinks = ["water", "tea", "hot coco", "coke", "Vodka", "coffee", "milk tea", "bubble tea", "lemon tea", "Meteor Latte", "Berry Fruit Tea", "Strawberry Milkshake", "Breath of Freshness Ice Cream", "Ice Cream Red Tea"];
 
 function is_someday() {
 	return today.getMonth() == 5 && today.getDate() == 4;
 }
 
 function getTodayString() {
-	return "今天是" + today.getFullYear() + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日";
+	return "Today is " + today.getFullYear() + "." + (today.getMonth() + 1) + "." + today.getDate();
 }
 
 function star(num) {

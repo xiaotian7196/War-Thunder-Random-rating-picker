@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>War Thunder Random Room Generator</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="tabs-container">
+      <div class="tabs">
+        <div class="tab active">Ground Battle</div>
+        <div class="tab">Air Battle</div>
+        <div class="tab">Naval Battle</div>
+        <div class="tab">Advanced Generation</div>
+      </div>
+      <div class="content-container">
+        <div class="content active">
+          <h2>Ground Battle Random Room Generator (1.0-12.3)</h2>
+          <button onclick="generateRandomNumberGround()">Generate</button>
+          <p id="randomNumberGround">BVVD Pegasus</p>
+          <img id="image" src="" alt="What faction to play today?" style="width: 30%; height: auto;">
+          <br />
+          <button onclick="displayRandomImage()">Change Faction</button>
+        </div>
+        <div class="content">
+          <h2>Air Battle Random Room Generator (1.0-13.0)</h2>
+          <button onclick="generateRandomNumberAirCombat()">Generate</button>
+          <p id="randomNumberAirCombat">BVVD Pegasus</p>
+          <img id="image1" src="" alt="What faction to play today?" style="width: 30%; height: auto;">
+          <br />
+          <button onclick="displayRandomImage()">Change Faction</button>
+        </div>
+        <div class="content">
+          <h2>Naval Battle Random Room Generator (1.0-7.0)</h2>
+          <button onclick="generateRandomNumberSeaBattle()">Generate</button>
+          <p id="randomNumberSeaBattle">BVVD Pegasus</p>
+          <img id="image2" src="" alt="What faction to play today?" style="width: 30%; height: auto;">
+          <br />
+          <button onclick="displayRandomImage()">Change Faction</button>
+        </div>
+        <div class="content">
+          <h2>Unconventional Random Room Generator (1.0-13.0, but higher chance for above 7.0)</h2>
+          <button onclick="generateRandomNumberPlus()">Generate</button>
+          <p id="randomNumberplus">BVVD Pegasus</p>
+          <img id="image3" src="" alt="What faction to play today?" style="width: 30%; height: auto;">
+          <br />
+          <button onclick="displayRandomImage()">Change Faction</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="date"></div>
+    <div class="line-tip">
+      <strong>Seating Direction:</strong> Face <span class="direction_value"></span> to play War Thunder, BVVD will
+      bless you.
+    </div>
+    <div class="line-tip">
+      <strong>Today’s Recommended Drink:</strong> <span class="drink_value"></span>
+    </div>
+    <div class="good">
+      <div class="title">
+        <table>
+          <tr>
+            <td>Recommended</td>
+          </tr>
+        </table>
+      </div>
+      <div class="awa1">
+        <ul></ul>
+      </div>
+    </div>
+    <div class="bad">
+      <div class="title">
+        <table>
+          <tr>
+            <td>Not Recommended</td>
+          </tr>
+        </table>
+      </div>
+      <div class="awa2">
+        <ul></ul>
+      </div>
+    </div>
+    <div class="line-tip">
+      <strong>If you want to know the source of this, please look at:<a href="https://en.wikipedia.org/wiki/Tung_Shing"
+          target="_blank" rel="noopener noreferrer">Wikipedia Tung_Shing</a></strong>
+    </div>
+    <div class="qwq">
+      <p>Disclaimer: This tool is for entertainment purposes only. We are not responsible for any issues that occur
+        during the generated matches, including but not limited to: poor network conditions, cannon misfires, being shot
+        down by BVVD, or getting wiped out by nuclear bombs.</p>
+      <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" target="_blank"
+          rel="noopener noreferrer"><img src="img/gitneko.png" width="2%" />Github Page</a> | <a
+          href="https://wt.xiaotianchen.com">Chinese Page</a></p>
+      <p></p>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/random.js"></script>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+  <script src="js/oldAlmanac_en.js"></script>
+</body>
+
+</html>
