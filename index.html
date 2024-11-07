@@ -7,6 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>战雷随机分房生成器</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('fonts/MiSans-Normal.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased
+    }
+
+    body {
+      font-family: 'MyCustomFont';
+    }
+  </style>
 </head>
 
 <body>
@@ -25,7 +38,7 @@
           <p id="randomNumberGround">BVVD飞马</p>
           <img id="image" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImageGround()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
         <div class="content">
           <h2>空战随机分房生成器（1.0-13.0）</h2>
@@ -33,7 +46,7 @@
           <p id="randomNumberAirCombat">BVVD飞马</p>
           <img id="image1" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImageAirCombat()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
         <div class="content">
           <h2>海战随机分房生成器（1.0-7.0）</h2>
@@ -41,7 +54,7 @@
           <p id="randomNumberSeaBattle">BVVD飞马</p>
           <img id="image2" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImageSeaBattle()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
         <div class="content">
           <h2>不正常随机分房生成器（1.0-13.0，但7.0以上的几率更大）</h2>
@@ -49,7 +62,7 @@
           <p id="randomNumberplus">BVVD飞马</p>
           <img id="image3" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImagePlus()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
       </div>
     </div>
@@ -90,7 +103,7 @@
       <p>免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
       <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" target="_blank"
           rel="noopener noreferrer"><img src="img/gitneko.png" width="14px" />&nbsp;Github Page</a> | <a
-          href="https://wt.xiaotianchen.com/index_en.html">English Page</a></p>
+          href="https://wt.xiaotianchen.com/index_en.html">English Page</a></p>本网站使用<img src="img/milogo.png" style="width: 14px;" />Sans字体显示
     </div>
   </div>
 

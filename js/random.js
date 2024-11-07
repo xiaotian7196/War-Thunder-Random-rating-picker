@@ -71,3 +71,12 @@ function generateRandomNumberGround() {
 function generateRandomNumberSeaBattle() {
     generateAndDisplayRandomNumberAndImage("randomNumberSeaBattle", 1, 7, validDecimals, "image2");
 }
+
+
+function randomImageOnly() {
+    displayRandomImage("image");
+    displayRandomImage("image1");
+    displayRandomImage("image2");
+    displayRandomImage("image3");
+}
+
