@@ -7,6 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>战雷随机分房生成器</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('fonts/MiSans-Normal.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased
+    }
+
+    body {
+      font-family: 'MyCustomFont';
+    }
+  </style>
 </head>
 
 <body>
@@ -25,7 +38,7 @@
           <p id="randomNumberGround">BVVD飞马</p>
           <img id="image" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImageGround()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
         <div class="content">
           <h2>空战随机分房生成器（1.0-13.0）</h2>
@@ -33,7 +46,7 @@
           <p id="randomNumberAirCombat">BVVD飞马</p>
           <img id="image1" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImageAirCombat()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
         <div class="content">
           <h2>海战随机分房生成器（1.0-7.0）</h2>
@@ -41,7 +54,7 @@
           <p id="randomNumberSeaBattle">BVVD飞马</p>
           <img id="image2" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImageSeaBattle()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
         <div class="content">
           <h2>不正常随机分房生成器（1.0-13.0，但7.0以上的几率更大）</h2>
@@ -49,51 +62,44 @@
           <p id="randomNumberplus">BVVD飞马</p>
           <img id="image3" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
           <br />
-          <button onclick="displayRandomImagePlus()">换一个系</button>
+          <button onclick="randomImageOnly()">换一个系</button>
         </div>
       </div>
     </div>
-
-    <div class="date"></div>
-    <div class="line-tip">
-      <strong>座位朝向：</strong>面向<span class="direction_value"></span>打战雷，慈父护体。
-    </div>
-    <div class="line-tip">
-      <strong>今日宜饮：</strong><span class="drink_value"></span>
-    </div>
-    <div class="good">
-      <div class="title">
-        <table>
-          <tr>
-            <td>宜</td>
-          </tr>
-        </table>
+    <div class="OwO">
+      <div class="date"></div>
+      <div class="line-tip">
+        <strong>座位朝向：</strong>面向<span class="direction_value"></span>打战雷，慈父护体。
       </div>
-      <div class="awa1">
-        <ul></ul>
+      <div class="line-tip">
+        <strong>今日宜饮：</strong><span class="drink_value"></span>
       </div>
-    </div>
-    <div class="bad">
-      <div class="title">
-        <table>
-          <tr>
-            <td>不宜</td>
-          </tr>
-        </table>
+      <div class="good">
+        <div class="title">
+          <table>
+            <tr>
+              <td>宜</td>
+            </tr>
+          </table>
+        </div>
+        <div class="awa1">
+          <ul></ul>
+        </div>
       </div>
-      <div class="awa2">
-        <ul></ul>
+      <div class="bad">
+        <div class="title">
+          <table>
+            <tr>
+              <td>不宜</td>
+            </tr>
+          </table>
+        </div>
+        <div class="awa2">
+          <ul></ul>
+        </div>
       </div>
-    </div>
-
-    <div class="qwq">
-      <p>免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
-      <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" target="_blank"
-          rel="noopener noreferrer"><img src="img/gitneko.png" width="14px" />&nbsp;Github Page</a> | <a
-          href="https://wt.xiaotianchen.com/index_en.html">English Page</a></p>
     </div>
   </div>
-
   <script src="js/main.js"></script>
   <script src="js/random.js"></script>
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
