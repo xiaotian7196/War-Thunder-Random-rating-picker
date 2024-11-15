@@ -23,8 +23,8 @@ tabs.forEach((t, i) => {
 
 
 //小窗口
-const notification = document.querySelector('.notification');
-const closeButton = document.querySelector('.notification .closeButton');
+const notification = document.querySelector('.xwx');
+const closeButton = document.querySelector('.xwx .iwi');
 closeButton.addEventListener('click', () => {
   notification.style.display = 'none';
 });
