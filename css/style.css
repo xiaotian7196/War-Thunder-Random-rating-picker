@@ -1,6 +1,5 @@
 /* ---通用样式--- */
 
-
 body {
   display: flex;
   justify-content: center;
@@ -10,7 +9,16 @@ body {
   margin: 0;
   background-color: #f0f0f0;
   flex-direction: column;
+  font-family: 'MyCustomFont';
 }
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../fonts/MiSans-Normal.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased
+  }
 
 .container {
   display: flex;
@@ -173,4 +181,30 @@ button:hover {
   color: grey;
   text-align: center;
   margin-top: 20px;
+}
+
+/* ---小提示--- */
+.xwx {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  left: 50%;
+  background-color: #f8f9fa;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.xwx p {
+  color: #444;
+  line-height: 24px;
+}
+
+.xwx .iwi {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
 }
