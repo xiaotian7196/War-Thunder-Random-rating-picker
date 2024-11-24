@@ -1,103 +1,102 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>战雷随机分房生成器</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>战雷随机分房生成器</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
-
 <body>
-  <div class="container">
+<div class="container">
     <div class="tabs-container">
-      <div class="tabs">
-        <div class="tab active">陆战</div>
-        <div class="tab">空战</div>
-        <div class="tab">海战</div>
-        <div class="tab">更高级的生成</div>
-      </div>
-      <div class="content-container">
-        <div class="content active">
-          <h2>陆战随机分房生成器（1.0-12.3）</h2>
-          <button onclick="generateRandomNumberGround()">生成</button>
-          <p id="randomNumberGround">BVVD飞马</p>
-          <img id="image" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
-          <br />
-          <button onclick="displayRandomImageGround()">换一个系</button>
+        <div class="tabs">
+            <div class="tab active">陆战</div>
+            <div class="tab">空战</div>
+            <div class="tab">海战</div>
+            <div class="tab">更高级的生成</div>
         </div>
-        <div class="content">
-          <h2>空战随机分房生成器（1.0-13.0）</h2>
-          <button onclick="generateRandomNumberAirCombat()">生成</button>
-          <p id="randomNumberAirCombat">BVVD飞马</p>
-          <img id="image1" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
-          <br />
-          <button onclick="displayRandomImageAirCombat()">换一个系</button>
+        <div class="content-container">
+            <div class="content active">
+                <h2>陆战随机分房生成器（1.0-12.3）</h2>
+                <button onclick="generateRandomNumberGround()">生成</button>
+                <p id="randomNumberGround">BVVD飞马</p>
+                <img id="image" src="" alt="今天要玩什么系呢">
+                <br/>
+                <button onclick="displayRandomImageGround()">换一个系</button>
+            </div>
+            <div class="content">
+                <h2>空战随机分房生成器（1.0-13.0）</h2>
+                <button onclick="generateRandomNumberAirCombat()">生成</button>
+                <p id="randomNumberAirCombat">BVVD飞马</p>
+                <img id="image1" src="" alt="今天要玩什么系呢">
+                <br/>
+                <button onclick="displayRandomImageAirCombat()">换一个系</button>
+            </div>
+            <div class="content">
+                <h2>海战随机分房生成器（1.0-7.0）</h2>
+                <button onclick="generateRandomNumberSeaBattle()">生成</button>
+                <p id="randomNumberSeaBattle">BVVD飞马</p>
+                <img id="image2" src="" alt="今天要玩什么系呢">
+                <br/>
+                <button onclick="displayRandomImageSeaBattle()">换一个系</button>
+            </div>
+            <div class="content">
+                <h2>不正常随机分房生成器（1.0-13.0，但7.0以上的几率更大）</h2>
+                <button onclick="generateRandomNumberPlus()">生成</button>
+                <p id="randomNumberPlus">BVVD飞马</p>
+                <img id="image3" src="" alt="今天要玩什么系呢">
+                <br/>
+                <button onclick="displayRandomImagePlus()">换一个系</button>
+            </div>
         </div>
-        <div class="content">
-          <h2>海战随机分房生成器（1.0-7.0）</h2>
-          <button onclick="generateRandomNumberSeaBattle()">生成</button>
-          <p id="randomNumberSeaBattle">BVVD飞马</p>
-          <img id="image2" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
-          <br />
-          <button onclick="displayRandomImageSeaBattle()">换一个系</button>
-        </div>
-        <div class="content">
-          <h2>不正常随机分房生成器（1.0-13.0，但7.0以上的几率更大）</h2>
-          <button onclick="generateRandomNumberPlus()">生成</button>
-          <p id="randomNumberplus">BVVD飞马</p>
-          <img id="image3" src="" alt="今天要玩什么系呢" style="width: 130px; height: auto; padding-bottom: 13px;">
-          <br />
-          <button onclick="displayRandomImagePlus()">换一个系</button>
-        </div>
-      </div>
     </div>
-
     <div class="date"></div>
     <div class="line-tip">
-      <strong>座位朝向：</strong>面向<span class="direction_value"></span>打战雷，慈父护体。
+        <strong>座位朝向：</strong>面向<span class="direction_value"></span>打战雷，慈父护体。
     </div>
     <div class="line-tip">
-      <strong>今日宜饮：</strong><span class="drink_value"></span>
+        <strong>今日宜饮：</strong><span class="drink_value"></span>
     </div>
     <div class="good">
-      <div class="title">
-        <table>
-          <tr>
-            <td>宜</td>
-          </tr>
-        </table>
-      </div>
-      <div class="awa1">
-        <ul></ul>
-      </div>
+        <div class="title">
+            <table>
+                <tr>
+                    <td>宜</td>
+                </tr>
+            </table>
+        </div>
+        <div class="awa1">
+            <ul></ul>
+        </div>
     </div>
     <div class="bad">
-      <div class="title">
-        <table>
-          <tr>
-            <td>不宜</td>
-          </tr>
-        </table>
-      </div>
-      <div class="awa2">
-        <ul></ul>
-      </div>
+        <div class="title">
+            <table>
+                <tr>
+                    <td>不宜</td>
+                </tr>
+            </table>
+        </div>
+        <div class="awa2">
+            <ul></ul>
+        </div>
     </div>
-
     <div class="qwq">
-      <p>免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
-      <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" target="_blank"
-          rel="noopener noreferrer"><img src="img/gitneko.png" width="14px" />&nbsp;Github Page</a> | <a
-          href="https://wt.xiaotianchen.com/index_en.html">English Page</a></p>
+        <p>免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
+        <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" target="_blank"
+              rel="noopener noreferrer"><img src="img/gitneko.png" width="14px" alt="neko"/>&nbsp;GitHub Page</a> | <a
+                href="https://wt.xiaotianchen.com/index_en.html">English Page</a></p>
+        <p>网页已经运行：<span id="html_time" style="color: grey;"></span></p>
     </div>
-  </div>
+</div>
 
-  <script src="js/main.js"></script>
-  <script src="js/random.js"></script>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
-  <script src="js/oldAlmanac.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/time.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+<script src="js/oldAlmanac.js"></script>
+<script src="js/random.js"></script>
 </body>
 
 </html>

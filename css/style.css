@@ -1,154 +1,159 @@
 /* ---通用样式--- */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* 使用 min-height 确保足够的高度 */
-  margin: 0;
-  background-color: #f0f0f0;
-  font-family: "Roboto", sans-serif;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 使用 min-height 确保足够的高度 */
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .container {
-  display: flex;
-  flex-direction: column; /* 纵向排列 */
-  width: 90%; /* 响应式宽度 */
-  max-width: 800px;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px; /* 内边距 */
-  margin: auto; /* 自动水平外边距 */
+    display: flex;
+    flex-direction: column; /* 纵向排列 */
+    width: 90%; /* 响应式宽度 */
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px; /* 内边距 */
+    margin: auto; /* 自动水平外边距 */
 }
 
 /* 标签部分样式 */
 .tabs-container {
-  border-radius: 30px;
-  display: flex;
-  box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    display: flex;
+    box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
 
 }
 
 .tabs-container .tabs {
-  border-radius: 30px;
-  width: 200px;
-  background: #66CCFF;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
+    border-radius: 30px;
+    width: 200px;
+    background: #66CCFF;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .tabs-container .tabs .tab {
-  margin: 5px 0;
-  border-radius: 30px;
-  padding: 16px 8px;
-  background: #66CCFF;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
+    margin: 5px 0;
+    border-radius: 30px;
+    padding: 16px 8px;
+    background: #66CCFF;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
 .tabs-container .tabs .tab:hover {
-  background: #55aacc; /* 悬停效果 */
+    background: #55aacc; /* 悬停效果 */
 }
 
 .tabs-container .tabs .tab.active {
-  background: #f6fdff;
-  color: #222;
+    background: #f6fdff;
+    color: #222;
 }
 
 .tabs-container .content-container {
-  background: #f6fdff;
-  flex-grow: 1; /* 使内容区域填满剩余空间 */
-  border-radius: 0 30px 30px 0;
-  padding: 20px; /* 添加内边距 */
+    background: #f6fdff;
+    flex-grow: 1; /* 使内容区域填满剩余空间 */
+    border-radius: 0 30px 30px 0;
+    padding: 20px; /* 添加内边距 */
 }
 
 .tabs-container .content-container .content {
-  display: none;
+    display: none;
 }
 
 .tabs-container .content-container .content.active {
-  display: block;
+    display: block;
 }
 
 .tabs-container .content-container h2 {
-  margin: 0 0 20px;
-  font-size: 24px;
+    margin: 0 0 20px;
+    font-size: 24px;
 }
 
 .tabs-container .content-container p {
-  line-height: 1.5;
+    line-height: 1.5;
 }
-
 
 
 /* ---黄历样式--- */
 .date {
-  padding-top: 15px;
-  padding-bottom: 8px;
-  font-size: 17pt;
-  font-weight: bold;
-  text-align: center;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: center;
 }
 
 .good,
 .bad {
-  margin: 15px 0; /* 适当的间距 */
-  padding: 10px;
-  border-radius: 10px;
+    margin: 15px 0; /* 适当的间距 */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .good {
-  background-color: #ffee44;
+    background-color: #ffee44;
 }
 
 .bad {
-  background-color: #ff4444;
+    background-color: #ff4444;
 }
 
 .title {
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center; /* 标题居中 */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; /* 标题居中 */
 }
 
 .awa1, .awa2 {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0; /* 顶部边距 */
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0; /* 顶部边距 */
 }
 
 .awa1 li, .awa2 li {
-  list-style: none;
-  padding: 5px 0; /* 列表项上下间距 */
+    list-style: none;
+    padding: 5px 0; /* 列表项上下间距 */
 }
 
 /* ---额外样式--- */
 .line-tip {
-  padding-bottom: 10px;
-  text-align: center; /* 文本居中 */
+    padding-bottom: 10px;
+    text-align: center; /* 文本居中 */
 }
 
 /* 按钮样式 */
 button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3; /* 悬停效果 */
+    background-color: #0056b3; /* 悬停效果 */
 }
 
 .qwq {
-  color: grey;
-  text-align: center;
-  margin-top: 20px;
+    color: grey;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content-container img {
+    width: 130px;
+    height: auto;
+    padding-bottom: 13px;
 }
