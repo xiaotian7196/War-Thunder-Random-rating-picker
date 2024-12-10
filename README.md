@@ -10,7 +10,7 @@ This is a small project designed to help those with indecision choose which War 
 
 如果你有什么好点子欢迎提交issue或者发邮件联系我：xiaotian7196@gmail.com
 
-[试试看(CN Page)](https://wt.xiaotianchen.com/) | 
-[website(EN Page)](https://wt.xiaotianchen.com/index_en.html)
+[试试看(CN Page)](https://wt.koten.top/) | 
+[website(EN Page)](https://wt.koten.top/index_en.html)
 
 <img src="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/blob/3ac88c89cc17a9004bd18188311edf1a26dbd7d9/1.jpg" height="522px">
