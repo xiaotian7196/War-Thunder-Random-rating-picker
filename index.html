@@ -2,52 +2,73 @@
 <html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>战雷随机分房生成器</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="container">
     <div class="tabs-container">
         <div class="tabs">
-            <div class="tab active">陆战</div>
-            <div class="tab">空战</div>
+            <div class="tab active">陆&nbsp;|&nbsp;空战</div>
             <div class="tab">海战</div>
-            <div class="tab">更高级的生成</div>
+            <div class="tab">自定义范围</div>
         </div>
         <div class="content-container">
             <div class="content active">
-                <h2>陆战随机分房生成器（1.0-12.3）</h2>
-                <button onclick="generateRandomNumberGround()">生成</button>
-                <p id="randomNumberGround">BVVD飞马</p>
-                <img id="image" src="" alt="今天要玩什么系呢">
-                <br/>
-                <button onclick="displayRandomImageGround()">换一个系</button>
-            </div>
-            <div class="content">
-                <h2>空战随机分房生成器（1.0-13.0）</h2>
-                <button onclick="generateRandomNumberAirCombat()">生成</button>
-                <p id="randomNumberAirCombat">BVVD飞马</p>
-                <img id="image1" src="" alt="今天要玩什么系呢">
-                <br/>
-                <button onclick="displayRandomImageAirCombat()">换一个系</button>
+                <h2>陆&nbsp;|&nbsp;空战随机分房生成器（1.0-13.0）</h2>
+                <div class="custom-range">
+                    <button onclick="generateRandomNumberAirCombat()">生成</button>
+                    <p id="randomNumberAirCombat">等待生成...</p>
+                    <div>
+                        <input id="showAirImage" onchange="toggleImage('Air')" type="checkbox">
+                        <label for="showAirImage">显示随机系</label>
+                    </div>
+                    <img alt="今天要玩什么系呢" id="image1" src="" style="display: none;">
+                    <br/>
+                    <button id="changeAirButton" onclick="displayRandomImageAirCombat()" style="display: none;">
+                        换一个系
+                    </button>
+                </div>
             </div>
             <div class="content">
                 <h2>海战随机分房生成器（1.0-7.0）</h2>
-                <button onclick="generateRandomNumberSeaBattle()">生成</button>
-                <p id="randomNumberSeaBattle">BVVD飞马</p>
-                <img id="image2" src="" alt="今天要玩什么系呢">
-                <br/>
-                <button onclick="displayRandomImageSeaBattle()">换一个系</button>
+                <div class="custom-range">
+                    <button onclick="generateRandomNumberSeaBattle()">生成</button>
+                    <p id="randomNumberSeaBattle">等待生成...</p>
+                    <div>
+                        <input id="showSeaImage" onchange="toggleImage('Sea')" type="checkbox">
+                        <label for="showSeaImage">显示随机系</label>
+                    </div>
+                    <img alt="今天要玩什么系呢" id="image2" src="" style="display: none;">
+                    <br/>
+                    <button id="changeSeaButton" onclick="displayRandomImageSeaBattle()" style="display: none;">
+                        换一个系
+                    </button>
+                </div>
             </div>
             <div class="content">
-                <h2>不正常随机分房生成器（1.0-13.0，但7.0以上的几率更大）</h2>
-                <button onclick="generateRandomNumberPlus()">生成</button>
-                <p id="randomNumberPlus">BVVD飞马</p>
-                <img id="image3" src="" alt="今天要玩什么系呢">
-                <br/>
-                <button onclick="displayRandomImagePlus()">换一个系</button>
+                <h2>自定义范围随机分房生成器</h2>
+                <div class="custom-range">
+                    <div class="range-input">
+                        <label for="customMin">最小分房:</label>
+                        <input id="customMin" max="13.0" min="1.0" onchange="validateDecimal(this)" step="0.1" type="number"
+                               value="1.0">
+                    </div>
+                    <div class="range-input">
+                        <label for="customMax">最大分房:</label>
+                        <input id="customMax" max="13.0" min="1.1" onchange="validateDecimal(this)" step="0.1" type="number"
+                               value="13.0">
+                    </div>
+                    <div class="range-options">
+                        <label>
+                            <input id="customHighChance" type="checkbox"> 80%概率生成较高分房(7.0以上)
+                        </label>
+                    </div>
+                    <button onclick="generateCustomRandomNumber()">生成</button>
+                    <p id="randomNumberCustom">等待生成...</p>
+                </div>
             </div>
         </div>
     </div>
@@ -83,20 +104,40 @@
         </div>
     </div>
     <div class="qwq">
-        <p>免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
-        <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" target="_blank"
-              rel="noopener noreferrer"><img src="img/gitneko.png" width="14px" alt="neko"/>&nbsp;GitHub Page</a> | <a
-                href="https://wt.xiaotianchen.com/index_en.html">English Page</a></p>
+        <p>
+            免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
+        <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" rel="noopener noreferrer"
+              target="_blank"><img alt="neko" src="img/gitneko.png" width="14px"/>&nbsp;GitHub Page</a> | <a
+                href="index_en.html">English Page</a></p>
         <p>网页已经运行：<span id="html_time" style="color: grey;"></span></p>
+        <p><a href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank">粤ICP备2024346856号-1</a>&nbsp;|&nbsp;<a
+                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011702000848"><img
+                rel="noopener noreferrer" src="img/beian.png" target="_blank"
+                width="15px">粤公网安备44011702000848号</a></p>
     </div>
 </div>
 
 <script src="js/main.js"></script>
 
 <script src="js/time.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.1/jquery.js" type="text/javascript"></script>
 <script src="js/oldAlmanac.js"></script>
 <script src="js/random.js"></script>
+<script>
+    function toggleImage(type) {
+        const checkbox = document.getElementById(`show${type}Image`);
+        const image = document.getElementById(type === 'Air' ? 'image1' :
+            type === 'Sea' ? 'image2' :
+                type === 'Plus' ? 'image3' : 'image');
+        const button = document.getElementById(`change${type}Button`);
+        const displayStyle = checkbox.checked ? 'block' : 'none';
+        image.style.display = displayStyle;
+        button.style.display = displayStyle;
+    }
+</script>
 </body>
-
+</html></title>
+</head>
+<body>
+</body>
 </html>

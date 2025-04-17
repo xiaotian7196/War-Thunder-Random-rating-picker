@@ -157,3 +157,42 @@ button:hover {
     height: auto;
     padding-bottom: 13px;
 }
+
+.custom-range {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.range-input {
+    margin-bottom: 15px;
+}
+
+.range-input label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+.range-input input {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.range-options {
+    margin: 15px 0;
+}
+
+.range-options label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.range-options input {
+    margin-right: 10px;
+}
