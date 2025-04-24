@@ -17,7 +17,8 @@
         </div>
         <div class="content-container">
             <div class="content active">
-                <h2>陆&nbsp;|&nbsp;空战随机分房生成器（1.0-13.0）</h2>
+                <h2>陆&nbsp;|&nbsp;空战随机分房生成器</h2>
+                <h3>(1.0-13.0)</h3>
                 <div class="custom-range">
                     <button onclick="generateRandomNumberAirCombat()">生成</button>
                     <p id="randomNumberAirCombat">等待生成...</p>
@@ -33,7 +34,8 @@
                 </div>
             </div>
             <div class="content">
-                <h2>海战随机分房生成器（1.0-7.0）</h2>
+                <h2>海战随机分房生成器</h2>
+                <h3>(1.0-7.0)</h3>
                 <div class="custom-range">
                     <button onclick="generateRandomNumberSeaBattle()">生成</button>
                     <p id="randomNumberSeaBattle">等待生成...</p>
@@ -53,12 +55,14 @@
                 <div class="custom-range">
                     <div class="range-input">
                         <label for="customMin">最小分房:</label>
-                        <input id="customMin" max="13.0" min="1.0" onchange="validateDecimal(this)" step="0.1" type="number"
+                        <input id="customMin" max="13.0" min="1.0" onchange="validateDecimal(this)" step="0.1"
+                               type="number"
                                value="1.0">
                     </div>
                     <div class="range-input">
                         <label for="customMax">最大分房:</label>
-                        <input id="customMax" max="13.0" min="1.1" onchange="validateDecimal(this)" step="0.1" type="number"
+                        <input id="customMax" max="13.0" min="1.1" onchange="validateDecimal(this)" step="0.1"
+                               type="number"
                                value="13.0">
                     </div>
                     <div class="range-options">
@@ -70,8 +74,11 @@
                     <p id="randomNumberCustom">等待生成...</p>
                 </div>
             </div>
+
         </div>
+
     </div>
+
     <div class="date"></div>
     <div class="line-tip">
         <strong>座位朝向：</strong>面向<span class="direction_value"></span>打战雷，慈父护体。
@@ -108,7 +115,7 @@
             免责声明，本玩意仅供娱乐使用，对于您在抽选的分房内发生的包括但不限于：网络状况不佳，炮闩击发失败，被BVVD吞弹药，出核弹被人扫下来了，本网站概不负责！</p>
         <p><a href="https://github.com/xiaotian7196/War-Thunder-Random-rating-picker/" rel="noopener noreferrer"
               target="_blank"><img alt="neko" src="img/gitneko.png" width="14px"/>&nbsp;GitHub Page</a> | <a
-                href="index_en.html">English Page</a></p>
+                href="https://wt.koten.top/">Chinese Page</a></p>
         <p>网页已经运行：<span id="html_time" style="color: grey;"></span></p>
         <p><a href="https://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank">粤ICP备2024346856号-1</a>&nbsp;|&nbsp;<a
                 href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44011702000848"><img
@@ -116,28 +123,10 @@
                 width="15px">粤公网安备44011702000848号</a></p>
     </div>
 </div>
-
 <script src="js/main.js"></script>
-
 <script src="js/time.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.1/jquery.js" type="text/javascript"></script>
 <script src="js/oldAlmanac.js"></script>
 <script src="js/random.js"></script>
-<script>
-    function toggleImage(type) {
-        const checkbox = document.getElementById(`show${type}Image`);
-        const image = document.getElementById(type === 'Air' ? 'image1' :
-            type === 'Sea' ? 'image2' :
-                type === 'Plus' ? 'image3' : 'image');
-        const button = document.getElementById(`change${type}Button`);
-        const displayStyle = checkbox.checked ? 'block' : 'none';
-        image.style.display = displayStyle;
-        button.style.display = displayStyle;
-    }
-</script>
-</body>
-</html></title>
-</head>
-<body>
 </body>
 </html>
